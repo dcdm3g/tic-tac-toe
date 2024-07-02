@@ -15,6 +15,7 @@ export function MarkSwitcher({ mark, setMark }: MarkSwitcherProps) {
 
       <div className="mt-6 flex self-stretch rounded-sm bg-dark-navy px-2 py-2.5">
         <button
+          aria-label="Pick X"
           data-selected={mark === 'x'}
           className="group flex-1 rounded-sm py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
           onClick={() => setMark('x')}
@@ -25,6 +26,7 @@ export function MarkSwitcher({ mark, setMark }: MarkSwitcherProps) {
         </button>
 
         <button
+          aria-label="Pick O"
           data-selected={mark === 'o'}
           className="group flex-1 rounded-sm py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
           onClick={() => setMark('o')}
