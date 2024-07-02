@@ -16,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className + ' text-body tracking-tracking'}>
+      <body
+        className={
+          outfit.className +
+          ' flex min-h-screen justify-center bg-dark-navy text-body uppercase tracking-tracking'
+        }
+      >
         {children}
       </body>
     </html>
