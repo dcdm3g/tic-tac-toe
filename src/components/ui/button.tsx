@@ -6,9 +6,9 @@ const button = tv({
   variants: {
     color: {
       yellow:
-        'shadow-light-yellow-shadow bg-light-yellow hover:bg-light-yellow-hover',
-      blue: 'shadow-light-blue-shadow bg-light-blue hover:bg-light-blue-hover',
-      silver: 'shadow-silver-shadow bg-silver hover:bg-silver-hover',
+        'bg-light-yellow shadow-light-yellow-shadow hover:bg-light-yellow-hover',
+      blue: 'bg-light-blue shadow-light-blue-shadow hover:bg-light-blue-hover',
+      silver: 'bg-silver shadow-silver-shadow hover:bg-silver-hover',
     },
     size: {
       base: 'rounded px-4 py-3.5 text-heading-xs shadow md:px-[1.125rem] md:py-4 md:text-heading-sm',
