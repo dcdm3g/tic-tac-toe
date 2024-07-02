@@ -2,17 +2,18 @@ import { tv, type VariantProps } from 'tailwind-variants'
 import { ComponentProps } from 'react'
 
 const button = tv({
-  base: 'text-dark-navy',
+  base: 'inline-flex justify-center text-dark-navy',
   variants: {
     color: {
-      yellow: 'bg-light-yellow shadow-[#CC8B13] hover:bg-light-yellow-hover',
-      blue: 'bg-light-blue shadow-[#118C87] hover:bg-light-blue-hover',
-      silver: 'bg-silver shadow-[#6B8997] hover:bg-silver-hover',
+      yellow:
+        'shadow-light-yellow-shadow bg-light-yellow hover:bg-light-yellow-hover',
+      blue: 'shadow-light-blue-shadow bg-light-blue hover:bg-light-blue-hover',
+      silver: 'shadow-silver-shadow bg-silver hover:bg-silver-hover',
     },
     size: {
-      base: 'rounded-2xl p-5 text-heading-sm shadow-[inset_0_-8px]',
-      sm: 'rounded-[0.625rem] p-4 text-heading-xs shadow-[inset_0_-4px]',
-      icon: 'rounded-[0.625rem] p-8 shadow-[inset_0_-4px]',
+      base: 'rounded px-4 py-3.5 text-heading-xs shadow md:px-[1.125rem] md:py-4 md:text-heading-sm',
+      sm: 'rounded-sm px-4 py-3.5 text-heading-xs shadow-sm',
+      icon: 'size-10 items-center rounded-sm shadow-inner md:size-12',
     },
   },
   defaultVariants: {
