@@ -37,6 +37,7 @@ Great! The NextJS development server should start at http://localhost:3000. See 
 
 - [NextJS](https://nextjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
+- [Tailwind Variants](https://www.tailwind-variants.org)
 - [TypeScript](https://typescriptlang.org)
 - [ESLint](https://eslint.org)
 
