@@ -15,13 +15,19 @@ export function GameSetup() {
 
       <div className="flex flex-col gap-6">
         <Button color="yellow" asChild>
-          <Link href={{ pathname: '/solo', query: { m: mark } }}>
+          <Link
+            href={{ pathname: '/solo', query: { m: mark } }}
+            prefetch={false}
+          >
             NEW GAME (VS CPU)
           </Link>
         </Button>
 
         <Button color="blue" asChild>
-          <Link href={{ pathname: '/multiplayer', query: { m: mark } }}>
+          <Link
+            href={{ pathname: '/multiplayer', query: { m: mark } }}
+            prefetch={false}
+          >
             NEW GAME (VS PLAYER)
           </Link>
         </Button>
