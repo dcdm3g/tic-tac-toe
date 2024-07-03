@@ -20,7 +20,7 @@ export function MarkSwitcher({ mark, setMark }: MarkSwitcherProps) {
           className="group flex-1 rounded-sm py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
           onClick={() => setMark('x')}
         >
-          <X className="mx-auto">
+          <X className="mx-auto size-8">
             <XPath className="fill-silver transition-colors group-data-[selected=true]:fill-dark-navy" />
           </X>
         </button>
@@ -31,7 +31,7 @@ export function MarkSwitcher({ mark, setMark }: MarkSwitcherProps) {
           className="group flex-1 rounded-sm py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
           onClick={() => setMark('o')}
         >
-          <O className="mx-auto">
+          <O className="mx-auto size-8">
             <OPath className="fill-silver transition-colors group-data-[selected=true]:fill-dark-navy" />
           </O>
         </button>
