@@ -14,17 +14,17 @@ export function GameSetup() {
       <MarkSwitcher {...{ mark, setMark }} />
 
       <div className="flex flex-col gap-6">
-        <Link href={{ pathname: '/solo', query: { m: mark } }}>
-          <Button className="w-full" color="yellow">
+        <Button color="yellow" asChild>
+          <Link href={{ pathname: '/solo', query: { m: mark } }}>
             NEW GAME (VS CPU)
-          </Button>
-        </Link>
+          </Link>
+        </Button>
 
-        <Link href={{ pathname: '/multiplayer', query: { m: mark } }}>
-          <Button className="w-full" color="blue">
+        <Button color="blue" asChild>
+          <Link href={{ pathname: '/multiplayer', query: { m: mark } }}>
             NEW GAME (VS PLAYER)
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
     </div>
   )
