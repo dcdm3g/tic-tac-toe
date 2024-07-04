@@ -33,9 +33,8 @@ const config: Config = {
       tracking: '0.0625em',
     },
     boxShadow: {
-      DEFAULT: '0 8px #10212A',
-      sm: '0 4px #10212A',
-      inner: 'inset 0 -4px #10212A',
+      DEFAULT: 'inset 0 -8px #10212A',
+      sm: 'inset 0 -4px #10212A',
     },
     borderRadius: {
       DEFAULT: '0.9375rem',

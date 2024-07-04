@@ -10,10 +10,10 @@ export function GameSetup() {
   const [mark, setMark] = useState<Mark>('o')
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-10">
       <MarkSwitcher {...{ mark, setMark }} />
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <Button color="yellow" asChild>
           <Link
             href={{ pathname: '/solo', query: { m: mark } }}
