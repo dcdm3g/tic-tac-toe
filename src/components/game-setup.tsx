@@ -10,7 +10,7 @@ export function GameSetup() {
   const [mark, setMark] = useState<Mark>('o')
 
   return (
-    <div className="flex flex-col gap-8 md:gap-10">
+    <>
       <MarkSwitcher {...{ mark, setMark }} />
 
       <div className="flex flex-col gap-4 md:gap-5">
@@ -32,6 +32,6 @@ export function GameSetup() {
           </Link>
         </Button>
       </div>
-    </div>
+    </>
   )
 }
