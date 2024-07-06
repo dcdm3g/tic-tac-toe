@@ -23,6 +23,7 @@ const config: Config = {
       'semi-dark-navy': 'rgb(31, 54, 65)',
     },
     fontSize: {
+      sm: ['0.75rem', { lineHeight: '0.9375rem', fontWeight: 500 }],
       body: ['0.875rem', { lineHeight: '1.125rem', fontWeight: 500 }],
       'heading-xs': ['1rem', { lineHeight: '1.25rem', fontWeight: 700 }],
       'heading-sm': ['1.25rem', { lineHeight: '1.5625rem', fontWeight: 700 }],
@@ -37,12 +38,17 @@ const config: Config = {
       sm: 'inset 0 -4px #10212A',
     },
     borderRadius: {
-      DEFAULT: '0.9375rem',
-      sm: '0.625rem',
+      lg: '0.9375rem',
+      DEFAULT: '0.625rem',
+      sm: '0.3125rem',
     },
     extend: {
-      width: {
-        content: 'min(28.75rem, calc(100vw - 3rem))',
+      maxWidth: {
+        content: '28.75rem',
+      },
+      spacing: {
+        '13': '3.25rem',
+        '18': '4.5rem',
       },
     },
   },
