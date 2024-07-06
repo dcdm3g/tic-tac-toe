@@ -21,6 +21,7 @@ const config: Config = {
       },
       'dark-navy': 'rgb(26, 42, 51)',
       'semi-dark-navy': 'rgb(31, 54, 65)',
+      black: 'rgb(0, 0, 0)',
     },
     fontSize: {
       sm: ['0.75rem', { lineHeight: '0.9375rem', fontWeight: 500 }],

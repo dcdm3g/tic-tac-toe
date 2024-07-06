@@ -1,8 +1,6 @@
 'use client'
 
 import type { Mark } from '@/interfaces/mark'
-import type { Board } from '@/interfaces/board'
-import type { Scores } from '@/interfaces/scores'
 
 import { Logo } from '@/components/icons/logo'
 import { GameHeader } from '@/components/game-header'
@@ -11,6 +9,7 @@ import { GameRestart } from '@/components/game-restart'
 import { GameBoard } from '@/components/game-board'
 import { GameScoreboard } from '@/components/game-scoreboard'
 
+import { initialBoard } from '@/constants/initial-board'
 import { useState } from 'react'
 
 interface MultiplayerGameProps {
@@ -18,16 +17,21 @@ interface MultiplayerGameProps {
 }
 
 export function MultiplayerGame({ firstPlayerMark }: MultiplayerGameProps) {
-  const [turn] = useState<Mark>('x')
-  const [board] = useState(new Array(9).fill(null) as Board)
-  const [scores] = useState<Scores>({ x: 0, ties: 0, o: 0 })
+  const [turn, setTurn] = useState<Mark>('x')
+  const [board, setBoard] = useState(initialBoard)
+  const [scores] = useState({ x: 0, ties: 0, o: 0 })
+
+  function handleRestart() {
+    setBoard(initialBoard)
+    setTurn('x')
+  }
 
   return (
-    <main className="w-full max-w-content md:self-center">
+    <main className="m-6 w-full max-w-content md:self-center">
       <GameHeader>
         <Logo />
         <GameTurn turn={turn} />
-        <GameRestart />
+        <GameRestart onRestart={handleRestart} />
       </GameHeader>
 
       <GameBoard board={board} />

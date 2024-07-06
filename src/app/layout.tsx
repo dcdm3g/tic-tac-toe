@@ -19,7 +19,7 @@ export default function RootLayout({
       <body
         className={
           outfit.className +
-          ' flex min-h-screen justify-center bg-dark-navy p-6 text-body uppercase tracking-tracking'
+          ' flex min-h-screen justify-center bg-dark-navy text-body uppercase tracking-tracking'
         }
       >
         {children}

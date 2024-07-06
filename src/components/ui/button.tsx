@@ -16,7 +16,7 @@ const button = tv({
       primary:
         'rounded-lg px-4 pb-[calc(0.875rem_+_8px)] pt-3.5 text-heading-xs text-dark-navy shadow md:px-[1.125rem] md:pb-[calc(1rem_+_8px)] md:pt-4 md:text-heading-sm',
       secondary:
-        'rounded px-4 pb-[calc(0.875rem_+_4px)] pt-3.5 text-heading-xs text-dark-navy shadow-sm',
+        'rounded px-4 pb-[calc(0.875rem_+_2px)] pt-3.5 text-heading-xs text-dark-navy shadow-sm',
       icon: 'size-10 items-center rounded shadow-sm md:size-13',
     },
   },
