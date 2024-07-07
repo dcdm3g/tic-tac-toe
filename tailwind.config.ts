@@ -25,11 +25,11 @@ const config: Config = {
     },
     fontSize: {
       sm: ['0.75rem', { lineHeight: '0.9375rem', fontWeight: 500 }],
-      body: ['0.875rem', { lineHeight: '1.125rem', fontWeight: 500 }],
-      'heading-xs': ['1rem', { lineHeight: '1.25rem', fontWeight: 700 }],
-      'heading-sm': ['1.25rem', { lineHeight: '1.5625rem', fontWeight: 700 }],
-      'heading-md': ['1.5rem', { lineHeight: '1.875rem', fontWeight: 700 }],
-      'heading-lg': ['2.5rem', { lineHeight: '3.125rem', fontWeight: 700 }],
+      base: ['0.875rem', { lineHeight: '1.125rem', fontWeight: 500 }],
+      lg: ['1rem', { lineHeight: '1.25rem', fontWeight: 700 }],
+      xl: ['1.25rem', { lineHeight: '1.5625rem', fontWeight: 700 }],
+      '2xl': ['1.5rem', { lineHeight: '1.875rem', fontWeight: 700 }],
+      '3xl': ['2.5rem', { lineHeight: '3.125rem', fontWeight: 700 }],
     },
     letterSpacing: {
       tracking: '0.0625em',

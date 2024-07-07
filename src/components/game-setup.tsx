@@ -13,9 +13,7 @@ export function GameSetup() {
   return (
     <>
       <div className="flex flex-col items-center rounded-lg bg-semi-dark-navy px-6 pb-[calc(1.5rem_+_8px)] pt-6 shadow">
-        <h1 className="text-heading-xs text-silver">
-          PICK PLAYER 1&apos;S MARK
-        </h1>
+        <h1 className="text-lg text-silver">PICK PLAYER 1&apos;S MARK</h1>
 
         <div className="mt-6 flex self-stretch rounded bg-dark-navy px-2 py-2.5">
           <button

@@ -21,7 +21,7 @@ export function GameRestart({ onRestart }: GameRestartProps) {
         <AlertDialog.Overlay className="fixed inset-0 bg-black/50" />
 
         <AlertDialog.Content className="fixed inset-x-0 top-1/2 flex h-56 -translate-y-1/2 flex-col items-center justify-center gap-6 bg-semi-dark-navy md:h-64">
-          <AlertDialog.Title className="text-heading-md text-silver md:text-heading-lg">
+          <AlertDialog.Title className="text-2xl text-silver md:text-3xl">
             RESTART GAME?
           </AlertDialog.Title>
 

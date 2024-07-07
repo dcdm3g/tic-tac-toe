@@ -19,7 +19,7 @@ export function GameTurn({ turn }: GameTurnProps) {
         </O>
       )}
 
-      <p className="text-body font-bold text-silver md:text-heading-xs">TURN</p>
+      <p className="text-base font-bold text-silver md:text-lg">TURN</p>
     </div>
   )
 }

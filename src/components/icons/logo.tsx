@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import { cn } from '@/lib/tailwind-variants'
+import { cnBase as cn } from 'tailwind-variants'
 
 export function Logo({ className, ...rest }: ComponentProps<'svg'>) {
   return (

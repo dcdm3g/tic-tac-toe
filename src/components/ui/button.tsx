@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react'
 import type { VariantProps } from 'tailwind-variants'
 import { Slot } from '@radix-ui/react-slot'
-import { tv } from '@/lib/tailwind-variants'
+import { tv } from 'tailwind-variants'
 
 const button = tv({
   base: 'inline-flex items-center justify-center',
@@ -14,9 +14,8 @@ const button = tv({
     },
     variant: {
       primary:
-        'h-14 rounded-lg pb-[8px] text-heading-xs text-dark-navy shadow md:h-16 md:text-heading-sm',
-      secondary:
-        'h-13 rounded px-4 pb-[2px] text-heading-xs text-dark-navy shadow-sm',
+        'h-14 rounded-lg pb-[8px] text-lg text-dark-navy shadow md:h-16 md:text-xl',
+      secondary: 'h-13 rounded px-4 pb-[2px] text-lg text-dark-navy shadow-sm',
       icon: 'size-10 rounded-sm shadow-sm md:size-13 md:rounded',
     },
   },
