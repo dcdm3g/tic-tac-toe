@@ -1,6 +1,8 @@
 import type { Mark } from '@/interfaces/mark'
 import { MultiplayerGame } from '@/components/multiplayer-game'
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return [{ mark: 'x' }, { mark: 'o' }]
 }

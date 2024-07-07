@@ -1,6 +1,8 @@
 import type { Mark } from '@/interfaces/mark'
 import { SoloGame } from '@/components/solo-game'
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return [{ mark: 'x' }, { mark: 'o' }]
 }
