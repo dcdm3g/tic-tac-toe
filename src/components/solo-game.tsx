@@ -1,41 +1,30 @@
 'use client'
 
 import type { Mark } from '@/interfaces/mark'
-
 import { Logo } from '@/components/icons/logo'
 import { GameHeader } from '@/components/game-header'
 import { GameTurn } from '@/components/game-turn'
 import { GameRestart } from '@/components/game-restart'
 import { GameBoard } from '@/components/game-board'
 import { GameScoreboard } from '@/components/game-scoreboard'
-
-import { soloGameStateReducer } from '@/reducers/solo-game-state-reducer'
-import { initialGameState } from '@/constants/initial-game-state'
-import { useReducer } from 'react'
+import { useSolo } from '@/hooks/use-solo'
 
 interface SoloGameProps {
   mark: Mark
 }
 
 export function SoloGame({ mark }: SoloGameProps) {
-  const [{ turn, board, scores }, dispatch] = useReducer(
-    soloGameStateReducer,
-    initialGameState,
-  )
+  const { turn, board, scores, handleMark, handleRestart } = useSolo()
 
   return (
     <main className="m-6 w-full max-w-content md:self-center">
       <GameHeader>
         <Logo />
         <GameTurn turn={turn} />
-        <GameRestart onRestart={() => dispatch({ type: 'restarted' })} />
+        <GameRestart onRestart={handleRestart} />
       </GameHeader>
 
-      <GameBoard
-        turn={turn}
-        board={board}
-        onMark={(index) => dispatch({ type: 'marked', index })}
-      />
+      <GameBoard turn={turn} board={board} onMark={handleMark} />
 
       <GameScoreboard
         scores={scores}
