@@ -17,7 +17,7 @@ const button = tv({
         'h-14 rounded-lg pb-[8px] text-heading-xs text-dark-navy shadow md:h-16 md:text-heading-sm',
       secondary:
         'h-13 rounded px-4 pb-[2px] text-heading-xs text-dark-navy shadow-sm',
-      icon: 'size-10 rounded shadow-sm md:size-13',
+      icon: 'size-10 rounded-sm shadow-sm md:size-13 md:rounded',
     },
   },
   defaultVariants: {

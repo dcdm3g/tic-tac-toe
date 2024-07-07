@@ -10,7 +10,7 @@ export function GameBoard({ board }: GameBoardProps) {
       {board.map((m, i) => (
         <button
           key={i}
-          className="rounded bg-semi-dark-navy shadow"
+          className="rounded bg-semi-dark-navy shadow md:rounded-lg"
           aria-label="Mark"
         />
       ))}

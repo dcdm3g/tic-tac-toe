@@ -21,7 +21,7 @@ export function GameSetup() {
           <button
             aria-label="Pick X"
             data-selected={mark === 'x'}
-            className="group flex-1 rounded-sm py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
+            className="group flex-1 rounded py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
             onClick={() => setMark('x')}
           >
             <X className="mx-auto size-8">
