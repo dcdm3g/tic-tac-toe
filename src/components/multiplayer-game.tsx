@@ -9,32 +9,33 @@ import { GameRestart } from '@/components/game-restart'
 import { GameBoard } from '@/components/game-board'
 import { GameScoreboard } from '@/components/game-scoreboard'
 
-import { initialBoard } from '@/constants/initial-board'
-import { useState } from 'react'
+import { multiplayerGameStateReducer } from '@/reducers/multiplayer-game-state-reducer'
+import { initialGameState } from '@/constants/initial-game-state'
+import { useReducer } from 'react'
 
 interface MultiplayerGameProps {
   firstPlayerMark: Mark
 }
 
 export function MultiplayerGame({ firstPlayerMark }: MultiplayerGameProps) {
-  const [turn, setTurn] = useState<Mark>('x')
-  const [board, setBoard] = useState(initialBoard)
-  const [scores] = useState({ x: 0, ties: 0, o: 0 })
-
-  function handleRestart() {
-    setBoard(initialBoard)
-    setTurn('x')
-  }
+  const [{ board, turn, scores }, dispatch] = useReducer(
+    multiplayerGameStateReducer,
+    initialGameState,
+  )
 
   return (
     <main className="m-6 w-full max-w-content md:self-center">
       <GameHeader>
         <Logo />
         <GameTurn turn={turn} />
-        <GameRestart onRestart={handleRestart} />
+        <GameRestart onRestart={() => dispatch({ type: 'restarted' })} />
       </GameHeader>
 
-      <GameBoard board={board} />
+      <GameBoard
+        board={board}
+        turn={turn}
+        onMark={(index) => dispatch({ type: 'marked', index })}
+      />
 
       <GameScoreboard
         scores={scores}
