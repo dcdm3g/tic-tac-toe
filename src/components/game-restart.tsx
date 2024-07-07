@@ -25,6 +25,10 @@ export function GameRestart({ onRestart }: GameRestartProps) {
             RESTART GAME?
           </AlertDialog.Title>
 
+          <AlertDialog.Description className="sr-only">
+            This will reset the scores and start a new round.
+          </AlertDialog.Description>
+
           <div className="flex gap-4">
             <AlertDialog.Cancel asChild>
               <Button variant="secondary" color="silver">
