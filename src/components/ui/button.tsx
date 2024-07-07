@@ -4,7 +4,7 @@ import { Slot } from '@radix-ui/react-slot'
 import { tv } from '@/lib/tailwind-variants'
 
 const button = tv({
-  base: 'inline-flex justify-center',
+  base: 'inline-flex items-center justify-center',
   variants: {
     color: {
       yellow:
@@ -14,10 +14,10 @@ const button = tv({
     },
     variant: {
       primary:
-        'rounded-lg px-4 pb-[calc(0.875rem_+_8px)] pt-3.5 text-heading-xs text-dark-navy shadow md:px-[1.125rem] md:pb-[calc(1rem_+_8px)] md:pt-4 md:text-heading-sm',
+        'h-14 rounded-lg pb-[8px] text-heading-xs text-dark-navy shadow md:h-16 md:text-heading-sm',
       secondary:
-        'rounded px-4 pb-[calc(0.875rem_+_2px)] pt-3.5 text-heading-xs text-dark-navy shadow-sm',
-      icon: 'size-10 items-center rounded shadow-sm md:size-13',
+        'h-13 rounded px-4 pb-[2px] text-heading-xs text-dark-navy shadow-sm',
+      icon: 'size-10 rounded shadow-sm md:size-13',
     },
   },
   defaultVariants: {
