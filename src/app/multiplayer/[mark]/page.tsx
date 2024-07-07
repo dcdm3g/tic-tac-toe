@@ -2,13 +2,13 @@ import type { Mark } from '@/interfaces/mark'
 import { MultiplayerGame } from '@/components/multiplayer-game'
 
 export function generateStaticParams() {
-  return [{ firstPlayerMark: 'x' }, { firstPlayerMark: 'o' }]
+  return [{ mark: 'x' }, { mark: 'o' }]
 }
 
 interface MultiplayerProps {
-  params: { firstPlayerMark: Mark }
+  params: { mark: Mark }
 }
 
 export default function Multiplayer({ params }: MultiplayerProps) {
-  return <MultiplayerGame firstPlayerMark={params.firstPlayerMark} />
+  return <MultiplayerGame mark={params.mark} />
 }

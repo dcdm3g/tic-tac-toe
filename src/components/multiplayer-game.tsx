@@ -10,10 +10,10 @@ import { GameScoreboard } from '@/components/game-scoreboard'
 import { useMultiplayer } from '@/hooks/use-multiplayer'
 
 interface MultiplayerGameProps {
-  firstPlayerMark: Mark
+  mark: Mark
 }
 
-export function MultiplayerGame({ firstPlayerMark }: MultiplayerGameProps) {
+export function MultiplayerGame({ mark }: MultiplayerGameProps) {
   const { turn, board, scores, handleRestart, handleMark } = useMultiplayer()
 
   return (
@@ -28,9 +28,7 @@ export function MultiplayerGame({ firstPlayerMark }: MultiplayerGameProps) {
 
       <GameScoreboard
         scores={scores}
-        players={
-          firstPlayerMark === 'x' ? { x: 'P1', o: 'P2' } : { x: 'P2', o: 'P1' }
-        }
+        players={mark === 'x' ? { x: 'P1', o: 'P2' } : { x: 'P2', o: 'P1' }}
       />
     </main>
   )
