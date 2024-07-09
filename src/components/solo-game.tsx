@@ -24,7 +24,7 @@ export function SoloGame({ mark }: SoloGameProps) {
         <GameRestart onRestart={handleRestart} />
       </GameHeader>
 
-      <GameBoard turn={turn} board={board} onMark={handleMark} />
+      <GameBoard turn={turn} board={board} onMark={handleMark} result={null} />
 
       <GameScoreboard
         scores={scores}
