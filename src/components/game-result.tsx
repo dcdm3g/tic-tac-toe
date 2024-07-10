@@ -24,16 +24,20 @@ export function GameResult({
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50" />
 
-        <Dialog.Content className="fixed inset-x-0 top-1/2 flex h-56 -translate-y-1/2 flex-col items-center justify-center bg-semi-dark-navy md:h-64">
+        <Dialog.Content
+          className="fixed inset-x-0 top-1/2 flex h-56 -translate-y-1/2 flex-col items-center justify-center bg-semi-dark-navy md:h-64"
+          {...(result?.type === 'tie' && { 'aria-describedby': undefined })}
+        >
           {result?.type === 'win' ? (
             <>
-              <Dialog.Description className="mb-4 text-base font-bold text-silver md:text-lg">
+              <Dialog.Title className="mb-4 text-base font-bold text-silver md:text-lg">
                 {winningMessages[result.winner]}
-              </Dialog.Description>
+              </Dialog.Title>
 
-              <Dialog.Title
+              <Dialog.Description
                 data-winner={result.winner}
                 className="mb-6 flex items-center gap-2 text-2xl data-[winner=o]:text-light-yellow data-[winner=x]:text-light-blue md:gap-6 md:text-3xl"
+                aria-label={result.winner.toUpperCase() + ' TAKES THE ROUND'}
               >
                 {result.winner === 'x' ? (
                   <X className="size-7 md:size-16">
@@ -45,7 +49,7 @@ export function GameResult({
                   </O>
                 )}
                 TAKES THE ROUND
-              </Dialog.Title>
+              </Dialog.Description>
             </>
           ) : (
             <Dialog.Title className="mb-6 text-2xl text-silver md:mb-8 md:text-3xl">
