@@ -25,7 +25,7 @@ export function MultiplayerGame({ mark }: MultiplayerGameProps) {
     handleStartNextRound,
   } = useMultiplayer()
 
-  const players = mark === 'x' ? { x: '1', o: '2' } : { x: '2', o: '1' }
+  const playerIds = mark === 'x' ? { x: '1', o: '2' } : { x: '2', o: '1' }
 
   return (
     <main className="m-6 w-full max-w-content md:self-center">
@@ -44,14 +44,14 @@ export function MultiplayerGame({ mark }: MultiplayerGameProps) {
 
       <GameScoreboard
         scores={scores}
-        players={{ x: 'P'.concat(players.x), o: 'P'.concat(players.o) }}
+        players={{ x: 'P' + playerIds.x, o: 'P' + playerIds.o }}
       />
 
       <GameResult
         result={result}
         winningMessages={{
-          x: `PLAYER ${players.x} WINS!`,
-          o: `PLAYER ${players.o} WINS!`,
+          x: `PLAYER ${playerIds.x} WINS!`,
+          o: `PLAYER ${playerIds.o} WINS!`,
         }}
         onStartNextRound={handleStartNextRound}
       />
