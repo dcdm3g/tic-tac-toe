@@ -3,7 +3,7 @@ import type { Mark } from '@/interfaces/mark'
 import type { Result } from '@/interfaces/result'
 import { winningPatterns } from '@/constants/winning-patterns'
 
-export function calculateResult(board: Board, turn: Mark): Result {
+export function getResult(board: Board, turn: Mark): Result {
   const pattern = winningPatterns.find((w) => w.every((i) => board[i] === turn))
 
   if (pattern) {

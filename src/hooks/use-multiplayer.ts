@@ -3,7 +3,9 @@ import type { Board } from '@/interfaces/board'
 import type { Result } from '@/interfaces/result'
 import { initialBoard } from '@/constants/initial-board'
 import { initialScores } from '@/constants/initial-scores'
-import { calculateResult } from '@/utils/calculate-result'
+import { getResult } from '@/utils/get-result'
+import { opponentOf } from '@/utils/opponent-of'
+import { applyScore } from '@/utils/apply-score'
 import { useState } from 'react'
 
 export function useMultiplayer() {
@@ -21,23 +23,17 @@ export function useMultiplayer() {
 
   function handleMark(index: number) {
     const nextBoard = board.with(index, turn) as Board
-    const nextResult = calculateResult(nextBoard, turn)
-
-    if (!nextResult) {
-      setTurn((t) => (t === 'x' ? 'o' : 'x'))
-    } else {
-      setScores((s) =>
-        Object.fromEntries([
-          ...Object.entries(s),
-          nextResult.type === 'tie'
-            ? ['ties', s.ties + 1]
-            : [turn, s[turn] + 1],
-        ]),
-      )
-    }
+    const nextResult = getResult(nextBoard, turn)
 
     setBoard(nextBoard)
     setResult(nextResult)
+
+    if (nextResult) {
+      setScores((s) => applyScore(s, nextResult))
+      return
+    }
+
+    setTurn((t) => opponentOf(t))
   }
 
   function handleStartNextRound() {
