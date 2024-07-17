@@ -2,6 +2,7 @@
 
 import type { Mark } from '@/interfaces/mark'
 import { Logo } from '@/components/icons/logo'
+import { GameRoot } from '@/components/game-root'
 import { GameHeader } from '@/components/game-header'
 import { GameTurn } from '@/components/game-turn'
 import { GameRestart } from '@/components/game-restart'
@@ -27,7 +28,7 @@ export function SoloGame({ mark }: SoloGameProps) {
   } = useSolo(mark)
 
   return (
-    <main className="m-6 w-full max-w-content md:self-center">
+    <GameRoot>
       <GameHeader>
         <Logo />
         <GameTurn turn={mark} />
@@ -55,6 +56,6 @@ export function SoloGame({ mark }: SoloGameProps) {
         }
         onStartNextRound={handleStartNextRound}
       />
-    </main>
+    </GameRoot>
   )
 }

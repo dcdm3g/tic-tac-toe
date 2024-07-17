@@ -2,6 +2,7 @@
 
 import type { Mark } from '@/interfaces/mark'
 import { Logo } from '@/components/icons/logo'
+import { GameRoot } from '@/components/game-root'
 import { GameHeader } from '@/components/game-header'
 import { GameTurn } from '@/components/game-turn'
 import { GameRestart } from '@/components/game-restart'
@@ -28,7 +29,7 @@ export function MultiplayerGame({ mark }: MultiplayerGameProps) {
   const playerIds = mark === 'x' ? { x: '1', o: '2' } : { x: '2', o: '1' }
 
   return (
-    <main className="m-6 w-full max-w-content md:self-center">
+    <GameRoot>
       <GameHeader>
         <Logo />
         <GameTurn turn={turn} />
@@ -55,6 +56,6 @@ export function MultiplayerGame({ mark }: MultiplayerGameProps) {
         }}
         onStartNextRound={handleStartNextRound}
       />
-    </main>
+    </GameRoot>
   )
 }
