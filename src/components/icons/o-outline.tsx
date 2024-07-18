@@ -4,8 +4,8 @@ export function OOutline(props: ComponentProps<'svg'>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
+      width={66}
+      height={66}
       viewBox="0 0 66 66"
       fill="none"
       stroke="currentColor"
