@@ -6,8 +6,8 @@
 
 This is my Tic Tac Toe game website, where you will be able to:
 
-- Play with a friend (using the same device, at least for now)
-- Play with my algorithm (can you beat it?)
+- Play multiplayer (using the same device, at least for now)
+- Play solo (I will make the algorithm clever soon)
 
 Many thanks to [Frontend Mentor](https://frontendmentor.io) for this [coding challenge](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v) and the very beautiful design.
 
