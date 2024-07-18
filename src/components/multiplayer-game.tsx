@@ -1,9 +1,9 @@
 'use client'
 
 import type { Mark } from '@/interfaces/mark'
-import { Logo } from '@/components/icons/logo'
 import { GameRoot } from '@/components/game-root'
 import { GameHeader } from '@/components/game-header'
+import { GameLogo } from '@/components/game-logo'
 import { GameTurn } from '@/components/game-turn'
 import { GameRestart } from '@/components/game-restart'
 import { GameBoard } from '@/components/game-board'
@@ -31,7 +31,7 @@ export function MultiplayerGame({ mark }: MultiplayerGameProps) {
   return (
     <GameRoot>
       <GameHeader>
-        <Logo />
+        <GameLogo />
         <GameTurn turn={turn} />
         <GameRestart onRestart={handleRestart} />
       </GameHeader>

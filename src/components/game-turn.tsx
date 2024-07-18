@@ -1,24 +1,17 @@
 import type { Mark } from '@/interfaces/mark'
-import { X, XPath } from '@/components/icons/x'
-import { O, OPath } from '@/components/icons/o'
+import { X } from '@/components/icons/x'
+import { O } from '@/components/icons/o'
 
 interface GameTurnProps {
   turn: Mark
 }
 
 export function GameTurn({ turn }: GameTurnProps) {
+  const Mark = turn === 'x' ? X : O
+
   return (
     <div className="mr-8 flex h-10 items-center justify-center gap-2 rounded-sm bg-semi-dark-navy px-4 pb-[4px] shadow-sm md:mr-5 md:h-13 md:gap-3 md:rounded md:px-8">
-      {turn === 'x' ? (
-        <X className="size-4 md:size-5">
-          <XPath className="fill-silver" />
-        </X>
-      ) : (
-        <O className="size-4 md:size-5">
-          <OPath className="fill-silver" />
-        </O>
-      )}
-
+      <Mark className="size-4 text-silver md:size-5" />
       <p className="text-base font-bold text-silver md:text-lg">TURN</p>
     </div>
   )

@@ -1,7 +1,7 @@
 import type { Result } from '@/interfaces/result'
 import { Button } from '@/components/ui/button'
-import { X, XPath } from '@/components/icons/x'
-import { O, OPath } from '@/components/icons/o'
+import { X } from '@/components/icons/x'
+import { O } from '@/components/icons/o'
 import Link from 'next/link'
 import * as Dialog from '@radix-ui/react-dialog'
 
@@ -40,13 +40,9 @@ export function GameResult({
                 aria-label={result.winner.toUpperCase() + ' TAKES THE ROUND'}
               >
                 {result.winner === 'x' ? (
-                  <X className="size-7 md:size-16">
-                    <XPath className="fill-light-blue" />
-                  </X>
+                  <X className="size-7 text-light-blue md:size-16" />
                 ) : (
-                  <O className="size-7 md:size-16">
-                    <OPath className="fill-light-yellow" />
-                  </O>
+                  <O className="size-7 text-light-yellow md:size-16" />
                 )}
                 TAKES THE ROUND
               </Dialog.Description>

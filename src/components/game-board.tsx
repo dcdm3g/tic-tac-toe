@@ -1,10 +1,10 @@
 import type { Board } from '@/interfaces/board'
 import type { Mark } from '@/interfaces/mark'
 import type { Result } from '@/interfaces/result'
-import { XOutline, XOutlinePath } from '@/components/icons/x-outline'
-import { OOutline, OOutlinePath } from '@/components/icons/o-outline'
-import { X, XPath } from '@/components/icons/x'
-import { O, OPath } from '@/components/icons/o'
+import { XOutline } from '@/components/icons/x-outline'
+import { OOutline } from '@/components/icons/o-outline'
+import { X } from '@/components/icons/x'
+import { O } from '@/components/icons/o'
 
 interface GameBoardProps {
   board: Board
@@ -30,22 +30,14 @@ export function GameBoard({ board, turn, result, onMark }: GameBoardProps) {
         >
           {!m ? (
             turn === 'x' ? (
-              <XOutline className="size-5/12 opacity-0 transition-opacity group-hover:opacity-100 md:size-16">
-                <XOutlinePath className="stroke-light-blue" />
-              </XOutline>
+              <XOutline className="size-5/12 text-light-blue opacity-0 transition-opacity group-hover:opacity-100 md:size-16" />
             ) : (
-              <OOutline className="size-5/12 opacity-0 transition-opacity group-hover:opacity-100 md:size-16">
-                <OOutlinePath className="stroke-light-yellow" />
-              </OOutline>
+              <OOutline className="size-5/12 text-light-yellow opacity-0 transition-opacity group-hover:opacity-100 md:size-16" />
             )
           ) : m === 'x' ? (
-            <X className="size-5/12 md:size-16">
-              <XPath className="fill-light-blue group-data-[highlighted=true]:fill-semi-dark-navy" />
-            </X>
+            <X className="size-5/12 text-light-blue group-data-[highlighted=true]:text-semi-dark-navy md:size-16" />
           ) : (
-            <O className="size-5/12 md:size-16">
-              <OPath className="fill-light-yellow group-data-[highlighted=true]:fill-semi-dark-navy" />
-            </O>
+            <O className="size-5/12 text-light-yellow group-data-[highlighted=true]:text-semi-dark-navy md:size-16" />
           )}
         </button>
       ))}

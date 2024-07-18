@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { Restart, RestartPath } from '@/components/icons/restart'
+import { Restart } from '@/components/icons/restart'
 import * as AlertDialog from '@radix-ui/react-alert-dialog'
 
 interface GameRestartProps {
@@ -11,9 +11,7 @@ export function GameRestart({ onRestart }: GameRestartProps) {
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
         <Button variant="icon" aria-label="Restart">
-          <Restart className="size-4 md:size-5">
-            <RestartPath className="fill-semi-dark-navy" />
-          </Restart>
+          <Restart className="size-4 text-semi-dark-navy md:size-5" />
         </Button>
       </AlertDialog.Trigger>
 

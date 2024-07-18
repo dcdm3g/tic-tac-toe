@@ -2,8 +2,8 @@
 
 import type { Mark } from '@/interfaces/mark'
 import { Button } from '@/components/ui/button'
-import { X, XPath } from '@/components/icons/x'
-import { O, OPath } from '@/components/icons/o'
+import { X } from '@/components/icons/x'
+import { O } from '@/components/icons/o'
 import { useState } from 'react'
 import Link from 'next/link'
 
@@ -22,9 +22,7 @@ export function GameSetup() {
             className="group flex-1 rounded py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
             onClick={() => setMark('x')}
           >
-            <X className="mx-auto size-8">
-              <XPath className="fill-silver transition-colors group-data-[selected=true]:fill-dark-navy" />
-            </X>
+            <X className="mx-auto size-8 text-silver transition-colors group-data-[selected=true]:text-dark-navy" />
           </button>
 
           <button
@@ -33,9 +31,7 @@ export function GameSetup() {
             className="group flex-1 rounded py-3 transition-colors hover:bg-silver/5 data-[selected=true]:bg-silver"
             onClick={() => setMark('o')}
           >
-            <O className="mx-auto size-8">
-              <OPath className="fill-silver transition-colors group-data-[selected=true]:fill-dark-navy" />
-            </O>
+            <O className="mx-auto size-8 text-silver transition-colors group-data-[selected=true]:text-dark-navy" />
           </button>
         </div>
 
